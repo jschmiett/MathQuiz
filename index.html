@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Guess My Number!</title>
+    <link rel="stylesheet" href="./assets/style.css" />
+    <title>Math Quiz</title>
   </head>
   <body>
     <header>
@@ -13,8 +13,24 @@
     </header>
     <main>
       <div id="welcome">
-        <h2>Are you ready to start the quiz?</h2>
+        <h1>Are you ready to be quizzed?</h1>
         <button id="start">Start</button>
+      </div>
+
+      <div id="quiz" class="hide">
+        <h2 id="questions">Coding Assessment</h2>
+        <div id="answerButton"></div>
+        <div class="container">
+          <h3 class="welcome">Time Remaining</h3>
+          <h4 id="countdown"></h4>
+          <p id="timerEl"></p>
+        </div>
+      </div>
+
+      <div id="endGame" class="hide">
+        <h3>"Please enter your initials to save your high score!"</h3>
+        <input type="text" id="initials" />
+        <button id="endGameSubmitButton">initials</button>
       </div>
     </main>
     <script src="script.js"></script>
