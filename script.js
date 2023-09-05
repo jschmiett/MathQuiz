@@ -8,5 +8,5 @@ document.getElementById("start").addEventListener("click", start);
 function start() {
   console.log("Worked");
   document.getElementById("welcome").setAttribute("class", "hide");
-  document.getElementById("quiz").classList.remove("hide");
+  document.getElementById("quizOptions").classList.remove("hide");
 }
