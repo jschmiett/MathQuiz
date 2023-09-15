@@ -17,11 +17,11 @@
         <button id="start">Start</button>
       </div>
 
-      <div id="quizOptions" class="hide">
-        <h2>What would you like to be quizzed on?</h2>
+      <div id="digitOptions" class="hide">
+        <h2>How many digits would you like to be quizzed on?</h2>
         <label class="container"
           >Single Digit
-          <input type="checkbox" />
+          <input type="checkbox" id="singleDigit" />
           <span class="checkmark"></span>
         </label>
         <label class="container"
@@ -29,6 +29,11 @@
           <input type="checkbox" />
           <span class="checkmark"></span>
         </label>
+        <button id="digitsSelected">Next</button>
+      </div>
+
+      <div id="quizOptions" class="hide">
+        <h2>What would you like to be quizzed on?</h2>
         <label class="container"
           >Addition
           <input type="checkbox" />
@@ -39,7 +44,7 @@
           <input type="checkbox" />
           <span class="checkmark"></span>
         </label>
-        <button>Select options and start quiz</button>
+        <button id="optionsSelected">Start quiz</button>
       </div>
 
       <div id="quiz" class="hide">
