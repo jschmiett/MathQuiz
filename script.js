@@ -32,6 +32,8 @@ function digitsChecked() {
   } else if (singleDigit.checked == false && doubleDigit.checked == true) {
     console.log("Only Double Digits is selected");
   } else if (singleDigit.checked == false && doubleDigit.checked == false) {
+    //build in safty to guard againgst user error here.
+    //ask user to pick at least one option and redisplay the page
     console.log("Neither options is selected");
   } else {
     console.log("Something is very broken");
@@ -51,8 +53,12 @@ function optionsChecked() {
   } else if (addition.checked == false && subtraction.checked == true) {
     console.log("Only Subtraction is selected");
   } else if (addition.checked == false && subtraction.checked == false) {
+    //build in safty to guard againgst user error here.
+    //ask user to pick at least one option and redisplay the page
     console.log("Neither options is selected");
   } else {
     console.log("Something is very broken");
   }
+  document.getElementById("quizOptions").setAttribute("class", "hide");
+  document.getElementById("quiz").classList.remove("hide");
 }
