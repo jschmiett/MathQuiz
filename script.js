@@ -4,9 +4,16 @@ var timerEl = document.getElementById("countdown");
 var mainEl = document.getElementById("timerEl");
 var singleDigit = document.getElementById("singleDigit");
 var doubleDigit = document.getElementById("doubleDigit");
+var addition = document.getElementById("addition");
+var subtraction = document.getElementById("subtraction");
 
 document.getElementById("start").addEventListener("click", start);
-document.getElementById("digitsSelected").addEventListener("click", isChecked);
+document
+  .getElementById("digitsSelected")
+  .addEventListener("click", digitsChecked);
+document
+  .getElementById("optionsSelected")
+  .addEventListener("click", optionsChecked);
 
 function start() {
   console.log("Worked");
@@ -14,8 +21,8 @@ function start() {
   document.getElementById("digitOptions").classList.remove("hide");
 }
 
-function isChecked() {
-  console.log("isChecked is running");
+function digitsChecked() {
+  console.log("digitsChecked is running");
   console.log(singleDigit, singleDigit.checked);
   console.log(doubleDigit, doubleDigit.checked);
   if (singleDigit.checked == true && doubleDigit.checked == true) {
@@ -25,6 +32,25 @@ function isChecked() {
   } else if (singleDigit.checked == false && doubleDigit.checked == true) {
     console.log("Only Double Digits is selected");
   } else if (singleDigit.checked == false && doubleDigit.checked == false) {
+    console.log("Neither options is selected");
+  } else {
+    console.log("Something is very broken");
+  }
+  document.getElementById("digitOptions").setAttribute("class", "hide");
+  document.getElementById("quizOptions").classList.remove("hide");
+}
+
+function optionsChecked() {
+  console.log("optionsChecked is running");
+  console.log(addition, addition.checked);
+  console.log(subtraction, subtraction.checked);
+  if (addition.checked == true && subtraction.checked == true) {
+    console.log("Addition and Subtraction are checked");
+  } else if (addition.checked == true && subtraction.checked == false) {
+    console.log("Only Addition is selected");
+  } else if (addition.checked == false && subtraction.checked == true) {
+    console.log("Only Subtraction is selected");
+  } else if (addition.checked == false && subtraction.checked == false) {
     console.log("Neither options is selected");
   } else {
     console.log("Something is very broken");
