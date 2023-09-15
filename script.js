@@ -18,13 +18,13 @@ function isChecked() {
   console.log("isChecked is running");
   console.log(singleDigit, singleDigit.checked);
   console.log(doubleDigit, doubleDigit.checked);
-  if (singleDigit == true && doubleDigit == true) {
+  if (singleDigit.checked == true && doubleDigit.checked == true) {
     console.log("Single Digit and Double Digit are checked");
-  } else if (singleDigit == true && doubleDigit == false) {
+  } else if (singleDigit.checked == true && doubleDigit.checked == false) {
     console.log("Only Single Digit is selected");
-  } else if (singleDigit == false && doubleDigit == true) {
+  } else if (singleDigit.checked == false && doubleDigit.checked == true) {
     console.log("Only Double Digits is selected");
-  } else if (singleDigit == false && doubleDigit == false) {
+  } else if (singleDigit.checked == false && doubleDigit.checked == false) {
     console.log("Neither options is selected");
   } else {
     console.log("Something is very broken");
