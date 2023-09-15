@@ -61,4 +61,9 @@ function optionsChecked() {
   }
   document.getElementById("quizOptions").setAttribute("class", "hide");
   document.getElementById("quiz").classList.remove("hide");
+  quiz();
+}
+
+function quiz() {
+  console.log("Quiz has started");
 }
