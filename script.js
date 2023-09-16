@@ -1,5 +1,5 @@
 var gameProgress = 0;
-var timeLeft = 60;
+var timeLeft = 0;
 var timerEl = document.getElementById("countdown");
 var mainEl = document.getElementById("timerEl");
 var singleDigit = document.getElementById("singleDigit");
@@ -14,6 +14,15 @@ document
 document
   .getElementById("optionsSelected")
   .addEventListener("click", optionsChecked);
+document.getElementById("optionsSelected").addEventListener("click", countdown);
+
+function countdown() {
+  console.log("Countdown started");
+  var timeInterval = setInterval(function () {
+    timerEl.textContent = timeLeft + " seconds";
+    timeLeft++;
+  }, 1000);
+}
 
 function start() {
   console.log("Worked");
