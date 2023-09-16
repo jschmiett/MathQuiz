@@ -32,9 +32,9 @@ function digitsChecked() {
   } else if (singleDigit.checked == false && doubleDigit.checked == true) {
     console.log("Only Double Digits is selected");
   } else if (singleDigit.checked == false && doubleDigit.checked == false) {
-    //build in safty to guard againgst user error here.
+    //build in safety to guard againgst user error here.
     //ask user to pick at least one option and redisplay the page
-    console.log("Neither options is selected");
+    console.log("Neither option is selected");
   } else {
     console.log("Something is very broken");
   }
@@ -53,9 +53,9 @@ function optionsChecked() {
   } else if (addition.checked == false && subtraction.checked == true) {
     console.log("Only Subtraction is selected");
   } else if (addition.checked == false && subtraction.checked == false) {
-    //build in safty to guard againgst user error here.
+    //build in safety to guard againgst user error here.
     //ask user to pick at least one option and redisplay the page
-    console.log("Neither options is selected");
+    console.log("Neither option is selected");
   } else {
     console.log("Something is very broken");
   }
@@ -66,4 +66,10 @@ function optionsChecked() {
 
 function quiz() {
   console.log("Quiz has started");
+  var a = Math.floor(Math.random() * 10) + 1;
+  var b = Math.floor(Math.random() * 10) + 1;
+  console.log(a, b);
+  document.getElementById("answerButton").innerHTML = `${a} + ${b}`;
+  //build out for single digit addition first
+  //Use math.random to select numbers. Remember to use math.floor to only select integers
 }
