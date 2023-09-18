@@ -79,6 +79,16 @@ function quiz() {
   var b = Math.floor(Math.random() * 10) + 1;
   console.log(a, b);
   document.getElementById("answerButton").innerHTML = `${a} + ${b}`;
+  document.getElementById("submitMathAnswer").addEventListener("click", () => {
+    console.log(document.getElementById("mathAnswer").value);
+    var mathAnswer = parseFloat(document.getElementById("mathAnswer").value);
+    console.log(mathAnswer);
+    if (mathAnswer === a + b) {
+      console.log("Correct Answer!");
+    } else {
+      console.log("Nope!");
+    }
+  });
   //build out for single digit addition first
   //Use math.random to select numbers. Remember to use math.floor to only select integers
 }
