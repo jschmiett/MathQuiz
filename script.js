@@ -15,6 +15,7 @@ document
   .getElementById("optionsSelected")
   .addEventListener("click", optionsChecked);
 document.getElementById("optionsSelected").addEventListener("click", countdown);
+document.getElementById("optionsSelected").addEventListener("click", quiz);
 
 function countdown() {
   console.log("Countdown started");
@@ -70,25 +71,35 @@ function optionsChecked() {
   }
   document.getElementById("quizOptions").setAttribute("class", "hide");
   document.getElementById("quiz").classList.remove("hide");
-  quiz();
 }
 
 function quiz() {
   console.log("Quiz has started");
-  var a = Math.floor(Math.random() * 10) + 1;
-  var b = Math.floor(Math.random() * 10) + 1;
+  let a = Math.floor(Math.random() * 10) + 1;
+  let b = Math.floor(Math.random() * 10) + 1;
+  var i = 0;
   console.log(a, b);
   document.getElementById("answerButton").innerHTML = `${a} + ${b}`;
   document.getElementById("submitMathAnswer").addEventListener("click", () => {
-    console.log(document.getElementById("mathAnswer").value);
-    var mathAnswer = parseFloat(document.getElementById("mathAnswer").value);
-    console.log(mathAnswer);
-    if (mathAnswer === a + b) {
-      console.log("Correct Answer!");
+    if (i < 5) {
+      console.log(document.getElementById("mathAnswer").value);
+      var mathAnswer = parseFloat(document.getElementById("mathAnswer").value);
+      console.log(mathAnswer);
+      if (mathAnswer === a + b) {
+        console.log("Correct Answer!");
+      } else {
+        console.log("Nope!");
+      }
+      a = Math.floor(Math.random() * 10) + 1;
+      b = Math.floor(Math.random() * 10) + 1;
+      console.log(a, b);
+      document.getElementById("answerButton").innerHTML = `${a} + ${b}`;
+      i++;
     } else {
-      console.log("Nope!");
+      console.log("quiz over");
     }
   });
-  //build out for single digit addition first
-  //Use math.random to select numbers. Remember to use math.floor to only select integers
 }
+
+//build out for single digit addition first
+//Use math.random to select numbers. Remember to use math.floor to only select integers
