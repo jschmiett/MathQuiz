@@ -97,6 +97,8 @@ function quiz() {
       i++;
     } else {
       console.log("quiz over");
+      document.getElementById("quiz").setAttribute("class", "hide");
+      document.getElementById("endGame").classList.remove("hide");
     }
   });
 }
