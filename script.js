@@ -94,6 +94,8 @@ function quiz() {
       } else {
         console.log("Nope!");
       }
+      //Set answer input to clear in between each math question
+      document.getElementById("mathAnswer").value = "";
       a = Math.floor(Math.random() * 10) + 1;
       b = Math.floor(Math.random() * 10) + 1;
       console.log(a, b);
