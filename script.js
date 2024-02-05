@@ -73,6 +73,10 @@ function optionsChecked() {
   document.getElementById("quiz").classList.remove("hide");
 }
 
+function endGame() {
+  document.getElementById("endGame").classList.remove("hide");
+}
+
 function quiz() {
   console.log("Quiz has started");
   let a = Math.floor(Math.random() * 10) + 1;
@@ -98,7 +102,7 @@ function quiz() {
     } else {
       console.log("quiz over");
       document.getElementById("quiz").setAttribute("class", "hide");
-      document.getElementById("endGame").classList.remove("hide");
+      endGame;
     }
   });
 }
